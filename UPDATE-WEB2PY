@@ -1,0 +1,9 @@
+#!/bin/bash -x
+# git remote add upstream https://github.com/web2py/web2py/
+# git push --set-upstream origin dreamhost
+git checkout master
+git fetch upstream
+git merge upstream/master
+git checkout dreamhost
+git merge master
+touch tmp/restart.txt
